@@ -1,7 +1,5 @@
 package me.sanbo.utils;
 
-import me.sanbo.utils.callback.ICallback;
-
 import java.io.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -15,12 +13,36 @@ import java.util.concurrent.CopyOnWriteArrayList;
  */
 public class AdbShell {
 
+    // linux
+    private static String adbPath = "/home/xyf/tools/sdk/platform-tools/adb";
+
 //    public static void main(String[] args) {
+//        System.out.println(System.getenv("ANDROID_HOME"));
+//        System.out.println(System.getProperty("ANDROID_HOME"));
 //        String res = getStringUseAdb("cat /proc/cpuinfo");
 //        System.out.println(res);
 //    }
 
-    public static String getStringUseAdb(String cmd) {
+    public static String adb(String subCmd) {
+        InputStream is = null;
+        try {
+            Process proc = Runtime.getRuntime().exec(adbPath + " " + subCmd);
+            is = proc.getInputStream();
+            return DataConver.parserInputStreamToString(is);
+        } catch (Throwable e) {
+            e.printStackTrace();
+        } finally {
+            SafeClose.close(is);
+        }
+        return "";
+    }
+
+
+    public static String shell(String cmd) {
+        return shell(cmd, null, null);
+    }
+
+    public static String shell(String cmd, String replaceBeforeStr, String replaceAfterStr) {
         String result = "";
         Process proc = null;
         BufferedInputStream in = null;
@@ -31,7 +53,8 @@ public class AdbShell {
         DataOutputStream os = null;
         OutputStream pos = null;
         try {
-            proc = Runtime.getRuntime().exec("adb shell");
+            // ADB path
+            proc = Runtime.getRuntime().exec(adbPath + " shell");
             pos = proc.getOutputStream();
             os = new DataOutputStream(pos);
 
@@ -40,13 +63,20 @@ public class AdbShell {
             os.flush();
             os.writeBytes("exit\n");
             os.flush();
+
             ii = proc.getInputStream();
             in = new BufferedInputStream(ii);
             is = new InputStreamReader(in);
             br = new BufferedReader(is);
-            String line = "";
+            String line = "", processedLine = "";
             while ((line = br.readLine()) != null) {
-                sb.append(line).append("\n");
+                if (!TextUtils.isEmpty(line)) {
+                    processedLine = processLine(line, replaceBeforeStr, replaceAfterStr);
+                    sb.append(processedLine.trim()).append("\n");
+                } else {
+                    // 空值暂不处理
+                }
+
             }
             if (sb.length() > 0) {
                 return sb.substring(0, sb.length() - 1);
@@ -56,6 +86,7 @@ public class AdbShell {
                 result = result.trim();
             }
         } catch (Throwable e) {
+            e.printStackTrace();
         } finally {
             SafeClose.close(pos, ii, br, is, in, os);
         }
@@ -63,11 +94,11 @@ public class AdbShell {
         return result;
     }
 
-    public static CopyOnWriteArrayList<String> getArrayUseAdb(String cmd) {
-        return getArrayUseAdb(cmd, null, null);
+    public static CopyOnWriteArrayList<String> getArray(String cmd) {
+        return getArray(cmd, null, null);
     }
 
-    public static CopyOnWriteArrayList<String> getArrayUseAdb(
+    public static CopyOnWriteArrayList<String> getArray(
             String cmd, String replaceBeforeStr, String replaceAfterStr) {
         Process proc = null;
         BufferedInputStream in = null;
@@ -78,7 +109,7 @@ public class AdbShell {
         OutputStream pos = null;
         CopyOnWriteArrayList<String> results = new CopyOnWriteArrayList<>();
         try {
-            proc = Runtime.getRuntime().exec("adb shell");
+            proc = Runtime.getRuntime().exec(adbPath + " shell");
             pos = proc.getOutputStream();
             os = new DataOutputStream(pos);
 
@@ -119,13 +150,9 @@ public class AdbShell {
         if (TextUtils.isEmpty(replaceBeforeStr)) {
             return line;
         } else {
-            // 替换和被替换的值不能同时为空,不然替换个毛线
-            if (TextUtils.isEmpty(replaceAfterStr)) {
-                return line;
-            } else {
-                // 替换后的值
-                return line.replace(replaceBeforeStr, replaceAfterStr);
-            }
+            // 替换后的值
+            return line.replaceAll(replaceBeforeStr, replaceAfterStr);
+
         }
     }
 

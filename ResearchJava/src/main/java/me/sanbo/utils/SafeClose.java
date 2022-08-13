@@ -10,7 +10,8 @@ public class SafeClose {
             for (Closeable close : obj) {
 
                 try {
-                    close.close();
+                    if (close != null)
+                        close.close();
                 } catch (Throwable e) {
                     e.printStackTrace();
                 }

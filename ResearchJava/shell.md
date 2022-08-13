@@ -60,18 +60,14 @@ $ adb shell getprop ro.serialno
 ``` shell
 $ adb -d shell getprop ro.product.brand
 ```
-## 2. 获取手机设备型号
 
-``` shell
-$ adb -d shell getprop ro.product.brand
-```
-## 2. 获取手机版本
+## 3. 获取手机版本
 
 ``` shell
 $ adb -d shell getprop ro.build.version.release
 ```
 
-## 3. 获取cpu架构
+## 4. 获取cpu架构
 
 ``` shell
 $ adb shell getprop ro.product.cpu.abi
@@ -80,33 +76,33 @@ $ adb shell getprop ro.product.cpu.abilist32
 $ adb shell getprop ro.product.cpu.abilist64
 ```
 
-## 4. 获取手机内存
+## 5. 获取手机内存
 
 ``` shell
 $ adb shell cat /proc/meminfo
 ```
 
 
-## 5. 获取手机cpu详情
+## 6. 获取手机cpu详情
 
 ``` shell
 $ adb shell cat /proc/cpuinfo
 ```
 
-## 6. 获取手机存储情况
+## 7. 获取手机存储情况
 
 ``` shell
 $ adb shell df /data
 ```
 
-## 6. 获取手机分辨率
+## 8. 获取手机分辨率
 
 ``` shell
 $ adb shell wm size
 ######更多详情
 $ adb shell dumpsys window displays
 ```
-## 6. 获取手机DPI
+## 9. 获取手机DPI
 
 ``` shell
 $ adb shell wm density
