@@ -69,3 +69,4 @@ fireline*.jar
 firelineReport/
 
 target/
+src/main/java/me/sanbo/Version.java
