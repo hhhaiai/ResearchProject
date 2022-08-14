@@ -6,9 +6,13 @@ import me.sanbo.utils.AdbShell;
 import me.sanbo.utils.FileUtils;
 import me.sanbo.utils.TextUtils;
 import me.sanbo.utils.Utils;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+
 
 /**
  * @Copyright © 2022 sanbo Inc. All rights reserved.
@@ -29,7 +33,7 @@ public class JResearchMain {
      *      * %Z: Creation unix time
      * @param fileName
      */
-    public static void getAllAliveHistory(String fileName) {
+    public static void getAllAliveHistory(String fileName) throws JSONException {
 
         List<PModel> models = new ArrayList<PModel>();
         String[] pres = new String[]{"/sdcard/Android/data/", "/sdcard/Android/media/", "/sdcard/Android/obb/", "/sdcard/Android/obj/"};
@@ -45,7 +49,7 @@ public class JResearchMain {
                 FileUtils.saveTextToFile(fileName, module.toCsvString(), true);
             }
         }
-        System.out.println("(" + Version.version()+") 保存完毕.");
+        System.out.println("(" + Version.version() + ") 保存完毕.");
     }
 
 
@@ -54,7 +58,7 @@ public class JResearchMain {
      * @param models
      * @param baseDirName
      */
-    private static void getHistoryAndParser(List<PModel> models, String baseDirName) {
+    private static void getHistoryAndParser(List<PModel> models, String baseDirName) throws JSONException {
         List<String> res = AdbShell.getArray("find " + baseDirName + " |xargs stat -c '%n %X %Y %Z'");
         if (res == null || res.size() < 1) {
             System.err.println("(" + Version.version() + ")[" + baseDirName + "] not has data, will return!");
@@ -99,32 +103,72 @@ public class JResearchMain {
                 long accessTime = Long.valueOf(pathAndTimes[1]);
                 long modTime = Long.valueOf(pathAndTimes[2]);
                 long creationTime = Long.valueOf(pathAndTimes[3]);
-//                System.out.println(path + "\r\n\t\tAccess LinuxTime:" + accessTime + "\r\n\t\tMod Linux Time:" + modTime + "\r\n\t\tCreation Linux Time:" + creationTime);
-
-                String appName = Utils.getAppName(pkgName);
-                long versionCode = Long.valueOf(Utils.getVersionCode(pkgName));
-                String versionName = Utils.getVersionName(pkgName);
-                String minSdk = Utils.getMinSdk(pkgName);
-                String targetSdk = Utils.getTargetSdk(pkgName);
-
-                PModel model = new PModel(path, appName, pkgName, versionCode, versionName, minSdk, targetSdk, accessTime, modTime, creationTime);
-                if (!models.contains(model)) {
-                    models.add(model);
+                JSONObject info = cacheJSON.optJSONObject(pkgName);
+                if (info == null) {
+                    System.err.println(path
+                            + "\r\n\t\tPkg Name:" + pkgName
+                            + "\r\n\t\tAccess LinuxTime:" + accessTime
+                            + "\r\n\t\tMod Linux Time:" + modTime
+                            + "\r\n\t\tCreation Linux Time:" + creationTime
+                            + "\r\n\t\tinfo:" + info
+                    );
+                    continue;
                 }
-            }
 
+                String appName = info.optString("appName");
+                long versionCode = info.optLong("versionCode");
+                String versionName = info.optString("versionName");
+                String minSdk = info.optString("minSdk");
+                String targetSdk = info.optString("targetSdk");
+                PModel model = new PModel(path, appName, pkgName, versionCode, versionName, minSdk, targetSdk, accessTime, modTime, creationTime);
+                models.add(model);
+            }
         }
     }
 
+    public static JSONObject cacheJSON = new JSONObject();
 
-    public static void main(String[] args) {
-        getAllAliveHistory("result.csv");
+    public static void main(String[] args) throws JSONException {
+        //add cache.
+        cache();
+        System.out.println("(" + Version.version() + ")caches over. " + cacheJSON.length());
+        getAllAliveHistory("data/result.csv");
+
+    }
 
 
-//        String line = "/sdcard/Android/data/com.xingin.xhs/cache/xhs_webView_resource/7764b704f3c593ce74ed7a1506e97743.0";
-//        // 1.解析包名
-//        String tmp = line.replaceAll("/sdcard/Android/data/", "");
-//        String pkgName=tmp.substring(0,tmp.indexOf("/"));
+    private static void cache() throws JSONException {
+        String fn = "data/" + Utils.getSerialNo() + ".json";
+        File f = new File(fn);
+        //已经采集
+        if (f.exists()) {
+            if (cacheJSON.length() < 1) {
+                cacheJSON = new JSONObject(FileUtils.readContent(fn));
+            }
+            return;
+        }
+        List<String> pkgs = Utils.getAllPackage();
+
+        for (int i = 0; i < pkgs.size(); i++) {
+            String pkgName = pkgs.get(i);
+            String appName = Utils.getAppName(pkgName);
+            long versionCode = Long.valueOf(Utils.getVersionCode(pkgName));
+            String versionName = Utils.getVersionName(pkgName);
+            String minSdk = Utils.getMinSdk(pkgName);
+            String targetSdk = Utils.getTargetSdk(pkgName);
+
+            JSONObject info = new JSONObject();
+            info.put("appName", appName);
+            info.put("pkgName", pkgName);
+            info.put("versionCode", versionCode);
+            info.put("versionName", versionName);
+            info.put("minSdk", minSdk);
+            info.put("targetSdk", targetSdk);
+            cacheJSON.put(pkgName, info);
+            System.out.println("current:" + i + "/" + pkgs.size());
+        }
+
+        FileUtils.saveTextToFile(fn, cacheJSON.toString(), false);
 
     }
 }

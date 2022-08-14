@@ -21,6 +21,7 @@ public class PModel {
     public long modLinuxTime = -1L;
     public long creationLinuxTime = -1L;
 
+
     public PModel(String _path, String _appName, String _pkg, long _versionCode, String _versionName, String _minsdk,
                   String _targetsdk, long _accessTime, long _modTime, long _creationTime
     ) {
@@ -37,11 +38,11 @@ public class PModel {
     }
 
     public static String getTitle() {
-        return "app名称,app包名,版本名称,版本值,最小支持版本,目标SDK,access时间,修改时间,创建时间";
+        return "app名称,app包名,版本名称,版本值,最小支持版本,目标SDK,access时间,修改时间,创建时间,路径";
     }
 
     public String toCsvString() {
-        return appName + "," + pkgName + "," + versionName + "," + versionCode + "," + minSdk + "," + targetSdk + "," + accessLinuxTime + "," + modLinuxTime + "," + creationLinuxTime;
+        return appName + "," + pkgName + "," + versionName + "," + versionCode + "," + minSdk + "," + targetSdk + "," + accessLinuxTime + "," + modLinuxTime + "," + creationLinuxTime + "," + path;
     }
 
     @Override
