@@ -1,6 +1,7 @@
 package me.sanbo.utils;
 
 import java.io.*;
+import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 
@@ -14,13 +15,17 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class AdbShell {
 
     // linux
-    private static String adbPath = "/home/xyf/tools/sdk/platform-tools/adb";
+//    private static String adbPath = "/home/xyf/tools/sdk/platform-tools/adb";
+    //windows
+    private static String adbPath = "adb";
 
 //    public static void main(String[] args) {
-//        System.out.println(System.getenv("ANDROID_HOME"));
-//        System.out.println(System.getProperty("ANDROID_HOME"));
-//        String res = getStringUseAdb("cat /proc/cpuinfo");
-//        System.out.println(res);
+////        System.out.println(System.getenv("ANDROID_HOME"));
+////        System.out.println(System.getProperty("ANDROID_HOME"));
+////        String res = getStringUseAdb("cat /proc/cpuinfo");
+//
+//        List<String> res=getArray("find /sdcard/Android/data/ |xargs stat -c '%n %X %Y %Z'");
+//        System.out.println(res.size());
 //    }
 
     public static String adb(String subCmd) {

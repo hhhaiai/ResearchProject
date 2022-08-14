@@ -16,9 +16,9 @@ import javax.swing.filechooser.FileSystemView;
  */
 public class FileUtils {
 
-    public static void main(String[] args) {
-        System.out.println(FileUtils.getDestopFilePath("result.txt"));
-    }
+//    public static void main(String[] args) {
+//        System.out.println(FileUtils.getDestopFilePath("result.txt"));
+//    }
 
     public static String getDestopFilePath(String fileName) {
         FileSystemView fsv = FileSystemView.getFileSystemView();

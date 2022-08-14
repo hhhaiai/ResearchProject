@@ -20,23 +20,23 @@ public class TextUtils {
      */
     public static String replaceSpaceForFilePath(String text) {
         if (text.contains(" ")) {
-            text = text.replaceAll(" ", "\\\\ ");
+            text = text.replaceAll(" ", "\\\\ ").trim();
         }
         return text;
     }
-
-    public static String[] split(String line, String regex, boolean isNeedWrapper) {
-        if (line.contains(regex)) {
-            return line.split(wrapper(regex, isNeedWrapper));
-        }
-        return new String[] {};
-    }
-
-    private static String wrapper(String regex, boolean isNeedWrapper) {
-        if (isNeedWrapper) {
-            return String.format("\\%s", regex);
-        } else {
-            return regex;
-        }
-    }
+//
+//    public static String[] split(String line, String regex, boolean isNeedWrapper) {
+//        if (line.contains(regex)) {
+//            return line.split(wrapper(regex, isNeedWrapper));
+//        }
+//        return new String[] {};
+//    }
+//
+//    private static String wrapper(String regex, boolean isNeedWrapper) {
+//        if (isNeedWrapper) {
+//            return String.format("\\%s", regex);
+//        } else {
+//            return regex;
+//        }
+//    }
 }

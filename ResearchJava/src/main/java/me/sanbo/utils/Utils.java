@@ -1,7 +1,9 @@
 package me.sanbo.utils;
 
 import java.io.File;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Utils {
 
@@ -13,9 +15,6 @@ public class Utils {
         return AdbShell.getArray("pm list package", "package:", "");
     }
 
-    public static void main(String[] args) {
-        System.out.println("getSerialNo:" + getSerialNo());
-    }
 
     public static String getSerialNo() {
         String result = AdbShell.shell("getprop ro.serialno");
@@ -161,7 +160,7 @@ public class Utils {
      *  false:无效包名
      */
     public static boolean isEfficientPkg(String pkgName) {
-        if (!TextUtils.isEmpty(pkgName) && !pkgName.startsWith(".") && pkgName.contains(".")) {
+        if (!TextUtils.isEmpty(pkgName) && !pkgName.startsWith(".") && pkgName.contains(".") ) {
             return true;
         } else {
             return false;
