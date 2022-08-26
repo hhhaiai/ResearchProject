@@ -16,9 +16,9 @@ import javax.swing.filechooser.FileSystemView;
  */
 public class FileUtils {
 
-//    public static void main(String[] args) {
-//        System.out.println(FileUtils.getDestopFilePath("result.txt"));
-//    }
+    // public static void main(String[] args) {
+    // System.out.println(FileUtils.getDestopFilePath("result.txt"));
+    // }
 
     public static String getDestopFilePath(String fileName) {
         FileSystemView fsv = FileSystemView.getFileSystemView();
@@ -37,36 +37,36 @@ public class FileUtils {
      * @param fileFullPathWithName 文件的全路径名称
      * @param fileFullPathWithName 文件的全路径名称
      * @return public static byte[] readForBytes(String fileFullPathWithName) {
-     * RandomAccessFile raf = null;
-     * try {
-     * // 传输文件内容
-     * byte[] buffer = new byte[1024 * 1002]; // 3的倍数
-     * raf = new RandomAccessFile(fileFullPathWithName, "r");
-     * long size = raf.read(buffer);
-     * while (size > -1) {
-     * if (size == buffer.length) {
-     * return Base64.getEncoder().encode(buffer);
-     * } else {
-     * byte tmp[] = new byte[(int) size];
-     * System.arraycopy(buffer, 0, tmp, 0, (int) size);
-     * return Base64.getEncoder().encode(tmp);
-     * }
-     * }
-     * } catch (Throwable e) {
-     * e.printStackTrace();
-     * } finally {
-     * close(raf);
-     * }
-     * <p>
-     * return new byte[]{};
-     * }
-     * <p>
-     * <p>
-     * <p>
-     * <p>
-     * <p>
-     * /**
-     * 读取文件内容,将文件内容读取成字符串
+     *         RandomAccessFile raf = null;
+     *         try {
+     *         // 传输文件内容
+     *         byte[] buffer = new byte[1024 * 1002]; // 3的倍数
+     *         raf = new RandomAccessFile(fileFullPathWithName, "r");
+     *         long size = raf.read(buffer);
+     *         while (size > -1) {
+     *         if (size == buffer.length) {
+     *         return Base64.getEncoder().encode(buffer);
+     *         } else {
+     *         byte tmp[] = new byte[(int) size];
+     *         System.arraycopy(buffer, 0, tmp, 0, (int) size);
+     *         return Base64.getEncoder().encode(tmp);
+     *         }
+     *         }
+     *         } catch (Throwable e) {
+     *         e.printStackTrace();
+     *         } finally {
+     *         close(raf);
+     *         }
+     *         <p>
+     *         return new byte[]{};
+     *         }
+     *         <p>
+     *         <p>
+     *         <p>
+     *         <p>
+     *         <p>
+     *         /**
+     *         读取文件内容,将文件内容读取成字符串
      * @return 文件内容
      */
     public static String readContent(String fileFullPathWithName) {
@@ -108,7 +108,9 @@ public class FileUtils {
 
     private static void close(Closeable fis) {
         try {
-            fis.close();
+            if (fis != null) {
+                fis.close();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -129,11 +131,8 @@ public class FileUtils {
     public static void saveTextToFile(final File file, final String saveContent, boolean append) {
         FileWriter fileWriter = null;
         try {
-            if (!file.exists()) {
-                file.createNewFile();
-                file.setExecutable(true);
-                file.setReadable(true);
-                file.setWritable(true);
+            if (!isOk(file)) {
+                return;
             }
             fileWriter = new FileWriter(file, append);
             fileWriter.write(saveContent);
@@ -145,4 +144,22 @@ public class FileUtils {
             close(fileWriter);
         }
     }
+
+    public static boolean isOk(File file) {
+        try {
+            if (!file.getParentFile().exists()) {
+                file.getParentFile().mkdirs();
+            }
+            if (!file.exists()) {
+                file.createNewFile();
+                file.setExecutable(true);
+                file.setReadable(true);
+                file.setWritable(true);
+            }
+            return true;
+        } catch (Throwable e) {
+        }
+        return false;
+    }
+
 }

@@ -1,6 +1,7 @@
 package me.sanbo.research;
 
 import android.app.usage.UsageEvents;
+import android.app.usage.UsageStats;
 import android.app.usage.UsageStatsManager;
 import android.content.Context;
 import android.content.Intent;
@@ -25,7 +26,9 @@ import org.json.JSONObject;
 import java.io.Closeable;
 import java.net.HttpURLConnection;
 import java.nio.channels.FileLock;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import ff.jnezha.jnt.cs.GithubHelper;
@@ -64,12 +67,13 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void usmWork(View view) {
-        getAllDataPlanB(0, System.currentTimeMillis());
+//        getAllDataPlanB(0, System.currentTimeMillis());
+        getAllDataUs(0, System.currentTimeMillis());
     }
 
 
     private void getAllDataPlanB(long beginTime, long endTime) {
-       final JSONArray arrs = new JSONArray();
+        final JSONArray arrs = new JSONArray();
         try {
             String lastAlivePackageName = null;
             long lastTimeStamp = -1L;
@@ -132,7 +136,66 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public  void upload(String result) {
+
+    private void getAllDataUs(long beginTime, long endTime) {
+        final JSONArray arrs = new JSONArray();
+        try {
+            List<UsageEvents.Event> events = new ArrayList<UsageEvents.Event>();
+            UsageStatsManager usm = (UsageStatsManager) getApplicationContext().getSystemService(Context.USAGE_STATS_SERVICE);
+
+            long current = beginTime;
+            while (current >= endTime) {
+                // 30秒数据取一次
+                List<UsageStats> queryUsageStats = usm.queryUsageStats(UsageStatsManager.INTERVAL_YEARLY, current, current + 30 * 1000);
+                for (UsageStats us : queryUsageStats) {
+                    Log.i(TAG, "us:" + us.toString() + "------FirstTimeStamp: " + get(us.getFirstTimeStamp()));
+                    String pkgName = us.getPackageName();
+
+                    long begin = us.getFirstTimeStamp();
+                    long end = us.getLastTimeStamp();
+                    if (end > current && end < (current + 30 * 1000)) {
+                        if (begin < current) {
+                            begin = current;
+                        }
+                        close(arrs, pkgName, begin, end);
+                    }
+                    // update
+                    current += 30 * 1000;
+                }
+            }
+
+
+        } catch (Throwable e) {
+            Log.e(TAG, Log.getStackTraceString(e));
+        }
+
+        Log.i(TAG, "arrs:" + arrs.length());
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                upload(arrs.toString());
+            }
+        }).start();
+
+    }
+
+    public static final String get(long timestamp) {
+        return get("yyyy-MM-dd HH:mm:ss", timestamp);
+    }
+
+    /**
+     * 根据规则获取固定日期的格式
+     *
+     * @param dateFormatPattern
+     * @param timestamp
+     * @return
+     */
+    public static final String get(String dateFormatPattern, long timestamp) {
+        return new SimpleDateFormat(dateFormatPattern).format(new Date(timestamp));
+    }
+
+    public void upload(String result) {
         String name = "/android_test.json";
         String token = "";
         try {
@@ -148,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             try {
-                Log.i(TAG,"===========即将上传======"
+                Log.i(TAG, "===========即将上传======"
                                 + "\r\n大小：" + result.length()
                                 + "\r\n带个单位：" + Formatter.formatFileSize(MainActivity.this, result.getBytes("UTF-8").length)
                                 + "\r\nname：" + name

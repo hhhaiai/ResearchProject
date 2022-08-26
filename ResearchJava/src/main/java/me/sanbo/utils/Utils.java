@@ -1,9 +1,7 @@
 package me.sanbo.utils;
 
 import java.io.File;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Utils {
 
@@ -61,15 +59,24 @@ public class Utils {
             String[] lines = result.split("\n");
             if (result.contains("application-label-zh")) {
                 for (String line : lines) {
-                    if (line.contains("application-label-zh")) {
-                        return line.replaceAll("application-label-zh:", "").replaceAll("\'", "").trim();
-                    }
+                    return line
+                            .replaceAll("application-label-zh:", "")
+                            .replaceAll("application-label-zh-CN:", "")
+                            .replaceAll("application-label:", "")
+                            .replaceAll("\'", "")
+                            .replaceAll("\\s+", "")
+                            .trim();
+
                 }
             } else if (result.contains("application-label")) {
                 for (String line : lines) {
-                    if (line.contains("application-label")) {
-                        return line.replaceAll("application-label:", "").replaceAll("\'", "").trim();
-                    }
+                    return line
+                            .replaceAll("application-label-zh:", "")
+                            .replaceAll("application-label-zh-CN:", "")
+                            .replaceAll("application-label:", "")
+                            .replaceAll("\'", "")
+                            .replaceAll("\\s+", "")
+                            .trim();
                 }
             }
         }
@@ -160,7 +167,7 @@ public class Utils {
      *  false:无效包名
      */
     public static boolean isEfficientPkg(String pkgName) {
-        if (!TextUtils.isEmpty(pkgName) && !pkgName.startsWith(".") && pkgName.contains(".") ) {
+        if (!TextUtils.isEmpty(pkgName) && !pkgName.startsWith(".") && pkgName.contains(".")) {
             return true;
         } else {
             return false;

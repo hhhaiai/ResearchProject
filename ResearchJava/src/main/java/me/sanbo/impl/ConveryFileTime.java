@@ -1,6 +1,7 @@
 package me.sanbo.impl;
 
 import me.sanbo.json.JSONException;
+import me.sanbo.utils.DateUtils;
 import me.sanbo.utils.FileUtils;
 
 import java.util.List;
@@ -32,53 +33,14 @@ ConveryFileTime {
                     + "," + ss[3] // 版本值
                     + "," + ss[4] // 最小支持版本
                     + "," + ss[5] // 目标SDK
-                    + "," + makesureMilliSeconds(Long.valueOf(ss[6].trim())) // access时间
-                    + "," + makesureMilliSeconds(Long.valueOf(ss[7].trim()))  // 修改时间
-                    + "," + makesureMilliSeconds(Long.valueOf(ss[8].trim()))  // 创建时间
+                    + "," + DateUtils.makesureMilliSeconds(Long.valueOf(ss[6].trim())) // access时间
+                    + "," + DateUtils.makesureMilliSeconds(Long.valueOf(ss[7].trim()))  // 修改时间
+                    + "," + DateUtils.makesureMilliSeconds(Long.valueOf(ss[8].trim()))  // 创建时间
                     + "," + ss[9] // 路径
                     ;
             FileUtils.saveTextToFile("../data/result-newtime.csv", newLine, true);
         }
     }
 
-
-    /**
-     * 确保参数为毫秒。即13位
-     *
-     * @param time
-     * @return
-     */
-    public static long makesureMilliSeconds(long time) {
-        return makeAfterZeroTimeLen(time, 13);
-    }
-
-    /**
-     *  后补0确保数字的个数。一般用于时间的转换，秒转毫秒
-     * @param num  要处理的数字
-     * @param targetLen 目标长度
-     * @return
-     */
-    public static long makeAfterZeroTimeLen(long num, int targetLen) {
-        String tts = String.valueOf(num);
-        int len = tts.length();
-        if (len < targetLen) {
-            // 如转换为毫秒，该部分逻辑如下：
-            // 小于13位,则代表差N位,方法补充N个0，等价于: now * 10的N次方
-            return num * ((long) Math.pow(10, targetLen - len));
-        } else if (len > targetLen) {
-            return Long.valueOf(tts.substring(0, targetLen));
-        }
-        return num;
-    }
-
-    /**
-     * 工具方法。获取时间位数
-     *
-     * @param time
-     * @return
-     */
-    public static int sizeof(long time) {
-        return String.valueOf(time).length();
-    }
 
 }

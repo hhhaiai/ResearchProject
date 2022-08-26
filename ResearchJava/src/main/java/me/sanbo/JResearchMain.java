@@ -1,6 +1,5 @@
 package me.sanbo;
 
-
 import me.sanbo.model.PModel;
 import me.sanbo.utils.AdbShell;
 import me.sanbo.utils.FileUtils;
@@ -13,7 +12,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
  * @Copyright © 2022 sanbo Inc. All rights reserved.
  * @Description: 入口类
@@ -23,20 +21,19 @@ import java.util.List;
  */
 public class JResearchMain {
 
-
-
-
     /**
      * 命令: stat -c '%n %X %Y %Z',意义：
-     *      * %X: Access unix time
-     *      * %Y: Mod unix time
-     *      * %Z: Creation unix time
+     * * %X: Access unix time
+     * * %Y: Mod unix time
+     * * %Z: Creation unix time
+     * 
      * @param fileName
      */
     public static void getAllAliveHistory(String fileName) throws JSONException {
 
         List<PModel> models = new ArrayList<PModel>();
-        String[] pres = new String[]{"/sdcard/Android/data/", "/sdcard/Android/media/", "/sdcard/Android/obb/", "/sdcard/Android/obj/"};
+        String[] pres = new String[] { "/sdcard/Android/data/", "/sdcard/Android/media/", "/sdcard/Android/obb/",
+                "/sdcard/Android/obj/" };
         for (String pre : pres) {
             getHistoryAndParser(models, pre);
         }
@@ -52,9 +49,9 @@ public class JResearchMain {
         System.out.println("(" + Version.version() + ") 保存完毕.");
     }
 
-
     /**
      * parser path to package and other info
+     * 
      * @param models
      * @param baseDirName
      */
@@ -72,14 +69,14 @@ public class JResearchMain {
             // 1.获取包名
             String tmp = line.replaceAll(baseDirName, "");
             String pkgName = "";
-            //support  this data
+            // support this data
             // /sdcard/Android/data/ 1636446312 1636446312 1653303830
             // /sdcard/Android/obj/.howto 1636446312 1636446312 1653303830
             if (tmp.startsWith(" ") || tmp.startsWith(".")) {
                 continue;
             }
 
-            //support /sdcard/Android/data/com.kmxs.reader
+            // support /sdcard/Android/data/com.kmxs.reader
             if (tmp.contains("/")) {
                 pkgName = tmp.substring(0, tmp.indexOf("/"));
             } else {
@@ -90,8 +87,8 @@ public class JResearchMain {
                 continue;
             }
 
-//            System.out.println("pkg:" + pkgName);
-//            //2.尝试拆分路径及时间
+            // System.out.println("pkg:" + pkgName);
+            // //2.尝试拆分路径及时间
             String[] pathAndTimes = line.split("\\s+");
             // support filepath/filename contain " "
             if (pathAndTimes.length != 4) {
@@ -110,8 +107,7 @@ public class JResearchMain {
                             + "\r\n\t\tAccess LinuxTime:" + accessTime
                             + "\r\n\t\tMod Linux Time:" + modTime
                             + "\r\n\t\tCreation Linux Time:" + creationTime
-                            + "\r\n\t\tinfo:" + info
-                    );
+                            + "\r\n\t\tinfo:" + info);
                     continue;
                 }
 
@@ -120,7 +116,8 @@ public class JResearchMain {
                 String versionName = info.optString("versionName");
                 String minSdk = info.optString("minSdk");
                 String targetSdk = info.optString("targetSdk");
-                PModel model = new PModel(path, appName, pkgName, versionCode, versionName, minSdk, targetSdk, accessTime, modTime, creationTime);
+                PModel model = new PModel(path, appName, pkgName, versionCode, versionName, minSdk, targetSdk,
+                        accessTime, modTime, creationTime);
                 models.add(model);
             }
         }
@@ -129,18 +126,17 @@ public class JResearchMain {
     public static JSONObject cacheJSON = new JSONObject();
 
     public static void main(String[] args) throws JSONException {
-        //add cache.
+        // add cache.
         cache();
         System.out.println("(" + Version.version() + ")caches over. " + cacheJSON.length());
         getAllAliveHistory("data/result.csv");
 
     }
 
-
     private static void cache() throws JSONException {
         String fn = "data/" + Utils.getSerialNo() + ".json";
         File f = new File(fn);
-        //已经采集
+        // 已经采集
         if (f.exists()) {
             if (cacheJSON.length() < 1) {
                 cacheJSON = new JSONObject(FileUtils.readContent(fn));
