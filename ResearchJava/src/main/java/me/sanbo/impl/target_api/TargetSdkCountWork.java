@@ -1,8 +1,6 @@
 package me.sanbo.impl.target_api;
 
-import me.sanbo.utils.Bilo;
-import me.sanbo.utils.FileUtils;
-import me.sanbo.utils.TextUtils;
+import me.sanbo.utils.*;
 
 import java.io.File;
 import java.text.NumberFormat;
@@ -12,12 +10,6 @@ import java.util.*;
  * 缓存文件及应用目标API级别关联论证
  */
 public class TargetSdkCountWork {
-    public static void main(String[] args) {
-
-
-        run();
-    }
-
 
     // 目标及所有apps
     private static String Name_target_apps = "../data/targetver/p_target_app.csv";
@@ -44,11 +36,20 @@ public class TargetSdkCountWork {
     // targetSdkVersion :  所有的文件路径
     private static Map<String, List<String>> targetSdkVersionAndFilepaths = new HashMap<String, List<String>>();
 
+    public static void main(String[] args) {
+        run();
+    }
+
+
 
     private static void run() {
         fullData();
         System.out.println("=====内存填充数据完毕====");
         cache1();
+        caceh2();
+    }
+
+    private static void caceh2() {
         FileUtils.saveTextToFile(Name_app_filePathCount, "app名称,文件路径数量", false);
         FileUtils.saveTextToFile(Name_target_totalfilePathCount, "目标API级别,文件路径数量", false);
         for (Map.Entry<String, List<String>> entry : packageAndFilepaths.entrySet()) {
