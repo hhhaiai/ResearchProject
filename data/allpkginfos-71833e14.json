@@ -1,6 +1,6 @@
 {
   "com.android.internal.display.cutout.emulation.noCutout" : {
-    "appName" : "application-label-zh-CN:隐藏",
+    "appName" : "隐藏",
     "pkgName" : "com.android.internal.display.cutout.emulation.noCutout",
     "versionCode" : 1,
     "versionName" : "1.0",
@@ -48,7 +48,7 @@
     "targetSdk" : "28"
   },
   "com.oneplus.gamespace" : {
-    "appName" : "application-label-zh-CN:游戏空间",
+    "appName" : "游戏空间",
     "pkgName" : "com.oneplus.gamespace",
     "versionCode" : 462,
     "versionName" : "2.4.9.2.210722094624.ff9f7bd2.4.2.0.200928213111.9e934b8",
@@ -56,7 +56,7 @@
     "targetSdk" : "29"
   },
   "com.android.internal.display.cutout.emulation.corner" : {
-    "appName" : "application-label-zh-CN:边角刘海屏",
+    "appName" : "边角刘海屏",
     "pkgName" : "com.android.internal.display.cutout.emulation.corner",
     "versionCode" : 1,
     "versionName" : "1.0",
@@ -80,7 +80,7 @@
     "targetSdk" : "29"
   },
   "com.android.internal.display.cutout.emulation.double" : {
-    "appName" : "application-label-zh-CN:双刘海屏",
+    "appName" : "双刘海屏",
     "pkgName" : "com.android.internal.display.cutout.emulation.double",
     "versionCode" : 1,
     "versionName" : "1.0",
@@ -88,7 +88,7 @@
     "targetSdk" : "29"
   },
   "com.android.providers.telephony" : {
-    "appName" : "application-label-zh-CN:电话和短信存储",
+    "appName" : "电话和短信存储",
     "pkgName" : "com.android.providers.telephony",
     "versionCode" : 29,
     "versionName" : "10",
@@ -104,7 +104,7 @@
     "targetSdk" : "29"
   },
   "com.jzyd.coupon" : {
-    "appName" : "application-label-zh-CN:省钱快报",
+    "appName" : "省钱快报",
     "pkgName" : "com.jzyd.coupon",
     "versionCode" : 22031,
     "versionName" : "2.20.31",
@@ -120,7 +120,7 @@
     "targetSdk" : "29"
   },
   "com.android.providers.calendar" : {
-    "appName" : "application-label-zh-CN:日历存储",
+    "appName" : "日历存储",
     "pkgName" : "com.android.providers.calendar",
     "versionCode" : 29,
     "versionName" : "10",
@@ -144,7 +144,7 @@
     "targetSdk" : "29"
   },
   "com.android.providers.media" : {
-    "appName" : "application-label-zh-CN:媒体存储设备",
+    "appName" : "媒体存储设备",
     "pkgName" : "com.android.providers.media",
     "versionCode" : 1023,
     "versionName" : "10",
@@ -224,7 +224,7 @@
     "targetSdk" : "28"
   },
   "com.oneplus.soundrecorder" : {
-    "appName" : "application-label-zh-CN:录音机",
+    "appName" : "录音机",
     "pkgName" : "com.oneplus.soundrecorder",
     "versionCode" : 30000301,
     "versionName" : "2.0.0.191031181032.75c0d9c",
@@ -256,7 +256,7 @@
     "targetSdk" : "26"
   },
   "com.finshell.wallet" : {
-    "appName" : "application-label-zh-CN:钱包",
+    "appName" : "钱包",
     "pkgName" : "com.finshell.wallet",
     "versionCode" : 3504,
     "versionName" : "3.5.0",
@@ -352,7 +352,7 @@
     "targetSdk" : "29"
   },
   "cn.oneplus.photos" : {
-    "appName" : "application-label-zh-CN:Shot on OnePlus",
+    "appName" : "Shot on OnePlus",
     "pkgName" : "cn.oneplus.photos",
     "versionCode" : 520,
     "versionName" : "2.1.1.200531231239.5f361722.1.0.190905110914.b1f3cc9",
@@ -368,7 +368,7 @@
     "targetSdk" : "29"
   },
   "com.example.wifirftest" : {
-    "appName" : "application-label-zh-CN:WifiRfTest",
+    "appName" : "WifiRfTest",
     "pkgName" : "com.example.wifirftest",
     "versionCode" : 1,
     "versionName" : "1.0",
@@ -392,7 +392,7 @@
     "targetSdk" : "30"
   },
   "com.android.externalstorage" : {
-    "appName" : "application-label-zh-CN:外部存储设备",
+    "appName" : "外部存储设备",
     "pkgName" : "com.android.externalstorage",
     "versionCode" : 29,
     "versionName" : "10",
@@ -416,7 +416,7 @@
     "targetSdk" : "29"
   },
   "com.android.htmlviewer" : {
-    "appName" : "application-label-zh-CN:HTML 查看程序",
+    "appName" : "HTML 查看程序",
     "pkgName" : "com.android.htmlviewer",
     "versionCode" : 29,
     "versionName" : "10",
@@ -440,7 +440,7 @@
     "targetSdk" : "28"
   },
   "com.oneplus.twspods" : {
-    "appName" : "application-label-zh-CN:OnePlus Buds",
+    "appName" : "OnePlus Buds",
     "pkgName" : "com.oneplus.twspods",
     "versionCode" : 190,
     "versionName" : "1.2.61.0.0.200904115736.e13a5b5",
@@ -456,7 +456,7 @@
     "targetSdk" : "29"
   },
   "com.android.companiondevicemanager" : {
-    "appName" : "application-label-zh-CN:配套设备管理器",
+    "appName" : "配套设备管理器",
     "pkgName" : "com.android.companiondevicemanager",
     "versionCode" : 29,
     "versionName" : "10",
@@ -488,7 +488,7 @@
     "targetSdk" : "29"
   },
   "com.android.providers.downloads" : {
-    "appName" : "application-label-zh-CN:内容下载管理器",
+    "appName" : "内容下载管理器",
     "pkgName" : "com.android.providers.downloads",
     "versionCode" : 29,
     "versionName" : "10",
@@ -528,7 +528,7 @@
     "targetSdk" : "26"
   },
   "com.oneplus.screenshot" : {
-    "appName" : "application-label-zh-CN:截屏",
+    "appName" : "截屏",
     "pkgName" : "com.oneplus.screenshot",
     "versionCode" : 4,
     "versionName" : "2.2.0",
@@ -568,7 +568,7 @@
     "targetSdk" : "29"
   },
   "com.oneplus.deskclock" : {
-    "appName" : "application-label-zh-CN:时钟",
+    "appName" : "时钟",
     "pkgName" : "com.oneplus.deskclock",
     "versionCode" : 521,
     "versionName" : "5.2.0",
@@ -592,7 +592,7 @@
     "targetSdk" : "29"
   },
   "com.qualcomm.qti.performancemode" : {
-    "appName" : "application-label-zh-CN:性能模式",
+    "appName" : "性能模式",
     "pkgName" : "com.qualcomm.qti.performancemode",
     "versionCode" : 29,
     "versionName" : "10",
@@ -600,7 +600,7 @@
     "targetSdk" : "29"
   },
   "com.android.browser" : {
-    "appName" : "application-label-zh-CN:浏览器",
+    "appName" : "浏览器",
     "pkgName" : "com.android.browser",
     "versionCode" : 418070001,
     "versionName" : "5.0.405",
@@ -696,7 +696,7 @@
     "targetSdk" : "29"
   },
   "cn.oneplus.nvbackup" : {
-    "appName" : "application-label-zh-CN:NVBackupUI",
+    "appName" : "NVBackupUI",
     "pkgName" : "cn.oneplus.nvbackup",
     "versionCode" : 29,
     "versionName" : "V1.00",
@@ -720,7 +720,7 @@
     "targetSdk" : "29"
   },
   "com.heytap.openid" : {
-    "appName" : "application-label-zh-CN:OpenID",
+    "appName" : "OpenID",
     "pkgName" : "com.heytap.openid",
     "versionCode" : 11,
     "versionName" : "1.0.12",
@@ -736,7 +736,7 @@
     "targetSdk" : "29"
   },
   "com.tencent.reading" : {
-    "appName" : "application-label-zh-CN:快报",
+    "appName" : "快报",
     "pkgName" : "com.tencent.reading",
     "versionCode" : 7390,
     "versionName" : "7.3.90",
@@ -776,7 +776,7 @@
     "targetSdk" : "29"
   },
   "com.android.providers.downloads.ui" : {
-    "appName" : "application-label-zh-CN:下载",
+    "appName" : "下载",
     "pkgName" : "com.android.providers.downloads.ui",
     "versionCode" : 29,
     "versionName" : "10",
@@ -800,7 +800,7 @@
     "targetSdk" : "29"
   },
   "com.android.simappdialog" : {
-    "appName" : "application-label-zh-CN:Sim App Dialog",
+    "appName" : "Sim App Dialog",
     "pkgName" : "com.android.simappdialog",
     "versionCode" : 29,
     "versionName" : "10",
@@ -808,7 +808,7 @@
     "targetSdk" : "29"
   },
   "com.xingin.xhs" : {
-    "appName" : "application-label-zh-CN:小红书",
+    "appName" : "小红书",
     "pkgName" : "com.xingin.xhs",
     "versionCode" : 7160324,
     "versionName" : "7.16.0",
@@ -840,7 +840,7 @@
     "targetSdk" : "29"
   },
   "net.oneplus.odm" : {
-    "appName" : "application-label-zh-CN:一加系统服务",
+    "appName" : "一加系统服务",
     "pkgName" : "net.oneplus.odm",
     "versionCode" : 29,
     "versionName" : "1.0.0",
@@ -848,7 +848,7 @@
     "targetSdk" : "28"
   },
   "com.tencent.mm" : {
-    "appName" : "application-label-zh-CN:微信",
+    "appName" : "微信",
     "pkgName" : "com.tencent.mm",
     "versionCode" : 2040,
     "versionName" : "8.0.16",
@@ -856,7 +856,7 @@
     "targetSdk" : "29"
   },
   "com.android.internal.display.cutout.emulation.tall" : {
-    "appName" : "application-label-zh-CN:长型刘海屏",
+    "appName" : "长型刘海屏",
     "pkgName" : "com.android.internal.display.cutout.emulation.tall",
     "versionCode" : 1,
     "versionName" : "1.0",
@@ -896,7 +896,7 @@
     "targetSdk" : "28"
   },
   "com.android.certinstaller" : {
-    "appName" : "application-label-zh-CN:证书安装程序",
+    "appName" : "证书安装程序",
     "pkgName" : "com.android.certinstaller",
     "versionCode" : 29,
     "versionName" : "10",
@@ -968,7 +968,7 @@
     "targetSdk" : "29"
   },
   "com.wapi.wapicertmanage" : {
-    "appName" : "application-label-zh-CN:WAPI证书",
+    "appName" : "WAPI证书",
     "pkgName" : "com.wapi.wapicertmanage",
     "versionCode" : 29,
     "versionName" : "10",
@@ -984,7 +984,7 @@
     "targetSdk" : "29"
   },
   "com.oneplus.coreservice" : {
-    "appName" : "application-label-zh-CN:Android 系统",
+    "appName" : "Android 系统",
     "pkgName" : "com.oneplus.coreservice",
     "versionCode" : 1,
     "versionName" : "1.0",
@@ -1024,7 +1024,7 @@
     "targetSdk" : "28"
   },
   "com.oneplus.applocker" : {
-    "appName" : "application-label-zh-CN:applocker",
+    "appName" : "applocker",
     "pkgName" : "com.oneplus.applocker",
     "versionCode" : 29,
     "versionName" : "10",
@@ -1032,7 +1032,7 @@
     "targetSdk" : "29"
   },
   "android" : {
-    "appName" : "application-label-zh-CN:Android 系统",
+    "appName" : "Android 系统",
     "pkgName" : "android",
     "versionCode" : 29,
     "versionName" : "10",
@@ -1056,7 +1056,7 @@
     "targetSdk" : "28"
   },
   "com.oneplus.gallery" : {
-    "appName" : "application-label-zh-CN:图库",
+    "appName" : "图库",
     "pkgName" : "com.oneplus.gallery",
     "versionCode" : 23240766,
     "versionName" : "3.7.28",
@@ -1088,7 +1088,7 @@
     "targetSdk" : "29"
   },
   "com.baidu.searchbox" : {
-    "appName" : "application-label-zh-CN:百度",
+    "appName" : "百度",
     "pkgName" : "com.baidu.searchbox",
     "versionCode" : 108025088,
     "versionName" : "12.28.5.10",
@@ -1112,7 +1112,7 @@
     "targetSdk" : "29"
   },
   "com.qti.qualcomm.deviceinfo" : {
-    "appName" : "application-label-zh-CN:设备信息",
+    "appName" : "设备信息",
     "pkgName" : "com.qti.qualcomm.deviceinfo",
     "versionCode" : 29,
     "versionName" : "10",
@@ -1128,7 +1128,7 @@
     "targetSdk" : "29"
   },
   "com.oneplus.factorymode" : {
-    "appName" : "application-label-zh-CN:工程模式",
+    "appName" : "工程模式",
     "pkgName" : "com.oneplus.factorymode",
     "versionCode" : 29,
     "versionName" : "V1.01",
@@ -1152,7 +1152,7 @@
     "targetSdk" : "28"
   },
   "com.android.mtp" : {
-    "appName" : "application-label-zh-CN:MTP 主机",
+    "appName" : "MTP 主机",
     "pkgName" : "com.android.mtp",
     "versionCode" : 29,
     "versionName" : "10",
@@ -1160,7 +1160,7 @@
     "targetSdk" : "29"
   },
   "com.android.nfc" : {
-    "appName" : "application-label-zh-CN:NFC服务",
+    "appName" : "NFC服务",
     "pkgName" : "com.android.nfc",
     "versionCode" : 29,
     "versionName" : "10",
@@ -1176,7 +1176,7 @@
     "targetSdk" : "29"
   },
   "com.android.stk" : {
-    "appName" : "application-label-zh-CN:SIM卡工具包",
+    "appName" : "SIM卡工具包",
     "pkgName" : "com.android.stk",
     "versionCode" : 29,
     "versionName" : "10",
@@ -1256,7 +1256,7 @@
     "targetSdk" : "29"
   },
   "com.android.hotspot2" : {
-    "appName" : "application-label-zh-CN:OsuLogin",
+    "appName" : "OsuLogin",
     "pkgName" : "com.android.hotspot2",
     "versionCode" : 29,
     "versionName" : "10",
@@ -1304,7 +1304,7 @@
     "targetSdk" : "29"
   },
   "com.android.settings.intelligence" : {
-    "appName" : "application-label-zh-CN:Settings Suggestions",
+    "appName" : "Settings Suggestions",
     "pkgName" : "com.android.settings.intelligence",
     "versionCode" : 29,
     "versionName" : "10",
@@ -1328,7 +1328,7 @@
     "targetSdk" : "29"
   },
   "com.oneplus.simcontacts" : {
-    "appName" : "application-label-zh-CN:SIM卡联系人管理",
+    "appName" : "SIM卡联系人管理",
     "pkgName" : "com.oneplus.simcontacts",
     "versionCode" : 10,
     "versionName" : "3.0.0",
@@ -1352,7 +1352,7 @@
     "targetSdk" : "29"
   },
   "com.liuzh.deviceinfo" : {
-    "appName" : "application-label-zh-CN:设备信息",
+    "appName" : "设备信息",
     "pkgName" : "com.liuzh.deviceinfo",
     "versionCode" : 229,
     "versionName" : "v2.7.9.3",
@@ -1368,7 +1368,7 @@
     "targetSdk" : "28"
   },
   "net.oneplus.push" : {
-    "appName" : "application-label-zh-CN:Push",
+    "appName" : "Push",
     "pkgName" : "net.oneplus.push",
     "versionCode" : 500,
     "versionName" : "1.4.0.191010190146.e8a0a3e",
@@ -1392,7 +1392,7 @@
     "targetSdk" : "28"
   },
   "com.android.providers.settings" : {
-    "appName" : "application-label-zh-CN:设置存储",
+    "appName" : "设置存储",
     "pkgName" : "com.android.providers.settings",
     "versionCode" : 29,
     "versionName" : "10",
@@ -1408,7 +1408,7 @@
     "targetSdk" : "29"
   },
   "com.oem.nfc" : {
-    "appName" : "application-label-zh-CN:nfc",
+    "appName" : "nfc",
     "pkgName" : "com.oem.nfc",
     "versionCode" : 1,
     "versionName" : "1.0",
@@ -1424,7 +1424,7 @@
     "targetSdk" : "26"
   },
   "com.android.printspooler" : {
-    "appName" : "application-label-zh-CN:打印处理服务",
+    "appName" : "打印处理服务",
     "pkgName" : "com.android.printspooler",
     "versionCode" : 29,
     "versionName" : "10",
@@ -1440,7 +1440,7 @@
     "targetSdk" : "29"
   },
   "com.android.dreams.basic" : {
-    "appName" : "application-label-zh-CN:基本互动屏保",
+    "appName" : "基本互动屏保",
     "pkgName" : "com.android.dreams.basic",
     "versionCode" : 29,
     "versionName" : "10",
@@ -1496,7 +1496,7 @@
     "targetSdk" : "29"
   },
   "com.android.inputdevices" : {
-    "appName" : "application-label-zh-CN:输入设备",
+    "appName" : "输入设备",
     "pkgName" : "com.android.inputdevices",
     "versionCode" : 29,
     "versionName" : "10",
@@ -1536,7 +1536,7 @@
     "targetSdk" : "30"
   },
   "com.heytap.speechassist" : {
-    "appName" : "application-label-zh-CN:小布助手",
+    "appName" : "小布助手",
     "pkgName" : "com.heytap.speechassist",
     "versionCode" : 815,
     "versionName" : "8.1.56.0.5",
@@ -1560,7 +1560,7 @@
     "targetSdk" : "29"
   },
   "com.android.bips" : {
-    "appName" : "application-label-zh-CN:默认打印服务",
+    "appName" : "默认打印服务",
     "pkgName" : "com.android.bips",
     "versionCode" : 29,
     "versionName" : "10",
@@ -1568,7 +1568,7 @@
     "targetSdk" : "29"
   },
   "com.oneplus.findmyphone" : {
-    "appName" : "application-label-zh-CN:一加手机找回",
+    "appName" : "一加手机找回",
     "pkgName" : "com.oneplus.findmyphone",
     "versionCode" : 300,
     "versionName" : "1.0.0",
@@ -1600,7 +1600,7 @@
     "targetSdk" : "28"
   },
   "com.oneplus" : {
-    "appName" : "application-label-zh-CN:Oneplus System",
+    "appName" : "Oneplus System",
     "pkgName" : "com.oneplus",
     "versionCode" : 1,
     "versionName" : "1.0.0",
@@ -1640,7 +1640,7 @@
     "targetSdk" : "29"
   },
   "com.android.musicfx" : {
-    "appName" : "application-label-zh-CN:MusicFX",
+    "appName" : "MusicFX",
     "pkgName" : "com.android.musicfx",
     "versionCode" : 10400,
     "versionName" : "1.4",
@@ -1696,7 +1696,7 @@
     "targetSdk" : "29"
   },
   "com.baidu.input_yijia" : {
-    "appName" : "application-label-zh-CN:百度输入法一加版",
+    "appName" : "百度输入法一加版",
     "pkgName" : "com.baidu.input_yijia",
     "versionCode" : 155,
     "versionName" : "7.5.10.637.5.10.61",
@@ -1712,7 +1712,7 @@
     "targetSdk" : "29"
   },
   "com.google.android.webview" : {
-    "appName" : "application-label-zh-CN:Android System WebView",
+    "appName" : "Android System WebView",
     "pkgName" : "com.google.android.webview",
     "versionCode" : 404413833,
     "versionName" : "81.0.4044.138",
@@ -1736,7 +1736,7 @@
     "targetSdk" : "29"
   },
   "com.coloros.mcs" : {
-    "appName" : "application-label-zh-CN:系统消息",
+    "appName" : "系统消息",
     "pkgName" : "com.coloros.mcs",
     "versionCode" : 1028,
     "versionName" : "1.0.28",
@@ -1784,7 +1784,7 @@
     "targetSdk" : "29"
   },
   "com.oneplus.voicewakeup" : {
-    "appName" : "application-label-zh-CN:Voice Wakeup",
+    "appName" : "Voice Wakeup",
     "pkgName" : "com.oneplus.voicewakeup",
     "versionCode" : 100,
     "versionName" : "1.0.0.191105161002.39a7d7a",
@@ -1832,7 +1832,7 @@
     "targetSdk" : "29"
   },
   "com.android.server.telecom" : {
-    "appName" : "application-label-zh-CN:通话管理",
+    "appName" : "通话管理",
     "pkgName" : "com.android.server.telecom",
     "versionCode" : 11,
     "versionName" : "4.0.0",
@@ -1872,7 +1872,7 @@
     "targetSdk" : "28"
   },
   "com.android.backup" : {
-    "appName" : "application-label-zh-CN:备份与恢复",
+    "appName" : "备份与恢复",
     "pkgName" : "com.android.backup",
     "versionCode" : 29,
     "versionName" : "10",
@@ -1896,7 +1896,7 @@
     "targetSdk" : "27"
   },
   "com.android.keychain" : {
-    "appName" : "application-label-zh-CN:密钥链",
+    "appName" : "密钥链",
     "pkgName" : "com.android.keychain",
     "versionCode" : 29,
     "versionName" : "10",
@@ -1920,7 +1920,7 @@
     "targetSdk" : "29"
   },
   "com.sup.android.superb" : {
-    "appName" : "application-label-zh-CN:皮皮虾",
+    "appName" : "皮皮虾",
     "pkgName" : "com.sup.android.superb",
     "versionCode" : 376,
     "versionName" : "3.7.6",
@@ -1952,7 +1952,7 @@
     "targetSdk" : "29"
   },
   "com.UCMobile" : {
-    "appName" : "application-label-zh-CN:UC浏览器",
+    "appName" : "UC浏览器",
     "pkgName" : "com.UCMobile",
     "versionCode" : 11148,
     "versionName" : "13.6.7.1148",
@@ -1960,7 +1960,7 @@
     "targetSdk" : "28"
   },
   "com.android.printservice.recommendation" : {
-    "appName" : "application-label-zh-CN:Print Service Recommendation Service",
+    "appName" : "Print Service Recommendation Service",
     "pkgName" : "com.android.printservice.recommendation",
     "versionCode" : 4,
     "versionName" : "1.3.0",
@@ -1968,7 +1968,7 @@
     "targetSdk" : "29"
   },
   "com.android.dialer" : {
-    "appName" : "application-label-zh-CN:电话",
+    "appName" : "电话",
     "pkgName" : "com.android.dialer",
     "versionCode" : 250008,
     "versionName" : "4.4.2",
@@ -1976,7 +1976,7 @@
     "targetSdk" : "28"
   },
   "com.oneplus.filemanager" : {
-    "appName" : "application-label-zh-CN:文件管理",
+    "appName" : "文件管理",
     "pkgName" : "com.oneplus.filemanager",
     "versionCode" : 30001353,
     "versionName" : "2.6.2.200618191557.3e42fa52.4.0.191101165428.b058638",
@@ -2008,7 +2008,7 @@
     "targetSdk" : "30"
   },
   "com.google.android.gms" : {
-    "appName" : "application-label-zh-CN:Google Play 服务",
+    "appName" : "Google Play 服务",
     "pkgName" : "com.google.android.gms",
     "versionCode" : 210214037,
     "versionName" : "21.02.14(120400-352619232)",
@@ -2016,7 +2016,7 @@
     "targetSdk" : "30"
   },
   "com.google.android.gsf" : {
-    "appName" : "application-label-zh-CN:Google 服务框架",
+    "appName" : "Google 服务框架",
     "pkgName" : "com.google.android.gsf",
     "versionCode" : 29,
     "versionName" : "10-6475670",
@@ -2088,7 +2088,7 @@
     "targetSdk" : "26"
   },
   "com.ss.android.auto" : {
-    "appName" : "application-label-zh-CN:懂车帝",
+    "appName" : "懂车帝",
     "pkgName" : "com.ss.android.auto",
     "versionCode" : 661,
     "versionName" : "6.6.1",
@@ -2112,7 +2112,7 @@
     "targetSdk" : "29"
   },
   "com.android.packageinstaller" : {
-    "appName" : "application-label-zh-CN:软件包安装程序",
+    "appName" : "软件包安装程序",
     "pkgName" : "com.android.packageinstaller",
     "versionCode" : 29,
     "versionName" : "10",
@@ -2136,7 +2136,7 @@
     "targetSdk" : "29"
   },
   "com.android.carrierdefaultapp" : {
-    "appName" : "application-label-zh-CN:运营商默认应用",
+    "appName" : "运营商默认应用",
     "pkgName" : "com.android.carrierdefaultapp",
     "versionCode" : 29,
     "versionName" : "10",
@@ -2160,7 +2160,7 @@
     "targetSdk" : "28"
   },
   "com.kugou.android" : {
-    "appName" : "application-label-zh-CN:酷狗音乐",
+    "appName" : "酷狗音乐",
     "pkgName" : "com.kugou.android",
     "versionCode" : 10917,
     "versionName" : "10.9.1",
@@ -2240,7 +2240,7 @@
     "targetSdk" : "30"
   },
   "com.android.inputmethod.latin" : {
-    "appName" : "application-label-zh-CN:Android 键盘 (AOSP)",
+    "appName" : "Android 键盘 (AOSP)",
     "pkgName" : "com.android.inputmethod.latin",
     "versionCode" : 28,
     "versionName" : "10",
@@ -2248,7 +2248,7 @@
     "targetSdk" : "28"
   },
   "com.tomorrow.playes" : {
-    "appName" : "application-label-zh-CN:明日影视",
+    "appName" : "明日影视",
     "pkgName" : "com.tomorrow.playes",
     "versionCode" : 28,
     "versionName" : "1.0.1",
@@ -2264,7 +2264,7 @@
     "targetSdk" : "29"
   },
   "com.oneplus.faceunlock" : {
-    "appName" : "application-label-zh-CN:Face Unlock",
+    "appName" : "Face Unlock",
     "pkgName" : "com.oneplus.faceunlock",
     "versionCode" : 20410111,
     "versionName" : "2.2.12",
@@ -2272,7 +2272,7 @@
     "targetSdk" : "28"
   },
   "com.oem.oemlogkit" : {
-    "appName" : "application-label-zh-CN:OnePlusLogKit",
+    "appName" : "OnePlusLogKit",
     "pkgName" : "com.oem.oemlogkit",
     "versionCode" : 1,
     "versionName" : "1.0",
@@ -2296,7 +2296,7 @@
     "targetSdk" : "26"
   },
   "com.baidu.searchbox.lite" : {
-    "appName" : "application-label-zh-CN:百度极速版",
+    "appName" : "百度极速版",
     "pkgName" : "com.baidu.searchbox.lite",
     "versionCode" : 28509440,
     "versionName" : "5.19.0.10",
@@ -2304,7 +2304,7 @@
     "targetSdk" : "29"
   },
   "com.android.managedprovisioning" : {
-    "appName" : "application-label-zh-CN:工作设置",
+    "appName" : "工作设置",
     "pkgName" : "com.android.managedprovisioning",
     "versionCode" : 29,
     "versionName" : "10",
@@ -2312,7 +2312,7 @@
     "targetSdk" : "29"
   },
   "com.opos.ads" : {
-    "appName" : "application-label-zh-CN:开屏信息展示服务",
+    "appName" : "开屏信息展示服务",
     "pkgName" : "com.opos.ads",
     "versionCode" : 112,
     "versionName" : "1.1.2",
@@ -2360,7 +2360,7 @@
     "targetSdk" : "29"
   },
   "com.heytap.datamigration" : {
-    "appName" : "application-label-zh-CN:DMApp",
+    "appName" : "DMApp",
     "pkgName" : "com.heytap.datamigration",
     "versionCode" : 4,
     "versionName" : "1.0.4",
@@ -2368,7 +2368,7 @@
     "targetSdk" : "28"
   },
   "com.google.android.documentsui" : {
-    "appName" : "application-label-zh-CN:文件",
+    "appName" : "文件",
     "pkgName" : "com.google.android.documentsui",
     "versionCode" : 291602100,
     "versionName" : "q_release_aml_patch_291602100",
@@ -2376,7 +2376,7 @@
     "targetSdk" : "29"
   },
   "com.oneplus.provision" : {
-    "appName" : "application-label-zh-CN:开机向导",
+    "appName" : "开机向导",
     "pkgName" : "com.oneplus.provision",
     "versionCode" : 100,
     "versionName" : "2.0.0",
@@ -2384,7 +2384,7 @@
     "targetSdk" : "28"
   },
   "com.android.dreams.phototable" : {
-    "appName" : "application-label-zh-CN:照片屏幕保护程序",
+    "appName" : "照片屏幕保护程序",
     "pkgName" : "com.android.dreams.phototable",
     "versionCode" : 29,
     "versionName" : "10",
@@ -2448,7 +2448,7 @@
     "targetSdk" : "30"
   },
   "com.oneplus.screenrecord" : {
-    "appName" : "application-label-zh-CN:屏幕录制",
+    "appName" : "屏幕录制",
     "pkgName" : "com.oneplus.screenrecord",
     "versionCode" : 201,
     "versionName" : "2.2.0.191016171642.f522116",
@@ -2504,7 +2504,7 @@
     "targetSdk" : "29"
   },
   "com.android.wallpaper.livepicker" : {
-    "appName" : "application-label-zh-CN:Live Wallpaper Picker",
+    "appName" : "Live Wallpaper Picker",
     "pkgName" : "com.android.wallpaper.livepicker",
     "versionCode" : 29,
     "versionName" : "10",
@@ -2512,7 +2512,7 @@
     "targetSdk" : "29"
   },
   "com.oneplus.bttestmode" : {
-    "appName" : "application-label-zh-CN:BTtestmode",
+    "appName" : "BTtestmode",
     "pkgName" : "com.oneplus.bttestmode",
     "versionCode" : 2,
     "versionName" : "2.0.20150430",
@@ -2552,7 +2552,7 @@
     "targetSdk" : "28"
   },
   "net.oneplus.commonlogtool" : {
-    "appName" : "application-label-zh-CN:Common Log Tool",
+    "appName" : "Common Log Tool",
     "pkgName" : "net.oneplus.commonlogtool",
     "versionCode" : 500,
     "versionName" : "1.4.0.190822192906.da30562",
@@ -2560,7 +2560,7 @@
     "targetSdk" : "28"
   },
   "com.android.apps.tag" : {
-    "appName" : "application-label-zh-CN:Tags",
+    "appName" : "Tags",
     "pkgName" : "com.android.apps.tag",
     "versionCode" : 101,
     "versionName" : "1.1",
@@ -2568,7 +2568,7 @@
     "targetSdk" : "29"
   },
   "com.oneplus.aod" : {
-    "appName" : "application-label-zh-CN:Ambient Display",
+    "appName" : "Ambient Display",
     "pkgName" : "com.oneplus.aod",
     "versionCode" : 29,
     "versionName" : "10",
@@ -2576,7 +2576,7 @@
     "targetSdk" : "29"
   },
   "com.oneplus.mms" : {
-    "appName" : "application-label-zh-CN:信息",
+    "appName" : "信息",
     "pkgName" : "com.oneplus.mms",
     "versionCode" : 46,
     "versionName" : "5.0.0.201211184018.f360a72",
@@ -2648,7 +2648,7 @@
     "targetSdk" : "30"
   },
   "com.Qunar" : {
-    "appName" : "application-label-zh-CN:去哪儿旅行",
+    "appName" : "去哪儿旅行",
     "pkgName" : "com.Qunar",
     "versionCode" : 252,
     "versionName" : "10.0.19",
@@ -2672,7 +2672,7 @@
     "targetSdk" : "29"
   },
   "com.qzone" : {
-    "appName" : "application-label-zh-CN:QQ空间",
+    "appName" : "QQ空间",
     "pkgName" : "com.qzone",
     "versionCode" : 137,
     "versionName" : "8.8.0.288",
@@ -2728,7 +2728,7 @@
     "targetSdk" : "29"
   },
   "com.tencent.news" : {
-    "appName" : "application-label-zh-CN:腾讯新闻",
+    "appName" : "腾讯新闻",
     "pkgName" : "com.tencent.news",
     "versionCode" : 6660,
     "versionName" : "6.6.60",
@@ -2736,7 +2736,7 @@
     "targetSdk" : "26"
   },
   "com.android.storagemanager" : {
-    "appName" : "application-label-zh-CN:存储空间管理器",
+    "appName" : "存储空间管理器",
     "pkgName" : "com.android.storagemanager",
     "versionCode" : 29,
     "versionName" : "10",
@@ -2744,7 +2744,7 @@
     "targetSdk" : "29"
   },
   "com.android.settings" : {
-    "appName" : "application-label-zh-CN:设置",
+    "appName" : "设置",
     "pkgName" : "com.android.settings",
     "versionCode" : 1062,
     "versionName" : "10",
@@ -2784,7 +2784,7 @@
     "targetSdk" : "29"
   },
   "com.heytap.mcs" : {
-    "appName" : "application-label-zh-CN:系统消息",
+    "appName" : "系统消息",
     "pkgName" : "com.heytap.mcs",
     "versionCode" : 3306,
     "versionName" : "3.3.6",
@@ -2840,7 +2840,7 @@
     "targetSdk" : "29"
   },
   "com.autonavi.minimap" : {
-    "appName" : "application-label-zh-CN:高德地图",
+    "appName" : "高德地图",
     "pkgName" : "com.autonavi.minimap",
     "versionCode" : 111100,
     "versionName" : "11.11.1.2843",
@@ -2856,7 +2856,7 @@
     "targetSdk" : "29"
   },
   "com.qualcomm.location" : {
-    "appName" : "application-label-zh-CN:LocationServices",
+    "appName" : "LocationServices",
     "pkgName" : "com.qualcomm.location",
     "versionCode" : 1,
     "versionName" : "1.0",
@@ -2864,7 +2864,7 @@
     "targetSdk" : "28"
   },
   "com.taobao.idlefish" : {
-    "appName" : "application-label-zh-CN:闲鱼",
+    "appName" : "闲鱼",
     "pkgName" : "com.taobao.idlefish",
     "versionCode" : 249,
     "versionName" : "7.2.50",
@@ -2872,7 +2872,7 @@
     "targetSdk" : "28"
   },
   "com.numberrecognition" : {
-    "appName" : "application-label-zh-CN:NumberRecognition",
+    "appName" : "NumberRecognition",
     "pkgName" : "com.numberrecognition",
     "versionCode" : 12,
     "versionName" : "1.1.2.2",
@@ -2920,7 +2920,7 @@
     "targetSdk" : "29"
   },
   "com.iflytek.inputmethod" : {
-    "appName" : "application-label-zh-CN:讯飞输入法",
+    "appName" : "讯飞输入法",
     "pkgName" : "com.iflytek.inputmethod",
     "versionCode" : 14682,
     "versionName" : "11.1.6",
@@ -2960,7 +2960,7 @@
     "targetSdk" : "29"
   },
   "cn.kuwo.player" : {
-    "appName" : "application-label-zh-CN:酷我音乐",
+    "appName" : "酷我音乐",
     "pkgName" : "cn.kuwo.player",
     "versionCode" : 10020,
     "versionName" : "10.0.2.0",
@@ -3000,7 +3000,7 @@
     "targetSdk" : "28"
   },
   "com.android.vpndialogs" : {
-    "appName" : "application-label-zh-CN:VpnDialogs",
+    "appName" : "VpnDialogs",
     "pkgName" : "com.android.vpndialogs",
     "versionCode" : 29,
     "versionName" : "10",
@@ -3008,7 +3008,7 @@
     "targetSdk" : "29"
   },
   "com.moji.mjweather" : {
-    "appName" : "application-label-zh-CN:墨迹天气",
+    "appName" : "墨迹天气",
     "pkgName" : "com.moji.mjweather",
     "versionCode" : 9020002,
     "versionName" : "9.0200.02",
@@ -3032,7 +3032,7 @@
     "targetSdk" : "30"
   },
   "com.oneplus.opbackup" : {
-    "appName" : "application-label-zh-CN:系统更新",
+    "appName" : "系统更新",
     "pkgName" : "com.oneplus.opbackup",
     "versionCode" : 652,
     "versionName" : "2.1.2.191121180024.0e716e1",
@@ -3056,7 +3056,7 @@
     "targetSdk" : "30"
   },
   "com.android.phone" : {
-    "appName" : "application-label-zh-CN:电话服务",
+    "appName" : "电话服务",
     "pkgName" : "com.android.phone",
     "versionCode" : 11,
     "versionName" : "4.0.0",
@@ -3064,7 +3064,7 @@
     "targetSdk" : "29"
   },
   "com.android.shell" : {
-    "appName" : "application-label-zh-CN:Shell",
+    "appName" : "Shell",
     "pkgName" : "com.android.shell",
     "versionCode" : 29,
     "versionName" : "10",
@@ -3072,7 +3072,7 @@
     "targetSdk" : "29"
   },
   "com.oneplus.contacts" : {
-    "appName" : "application-label-zh-CN:通讯录",
+    "appName" : "通讯录",
     "pkgName" : "com.oneplus.contacts",
     "versionCode" : 20008,
     "versionName" : "3.1.4",
@@ -3096,7 +3096,7 @@
     "targetSdk" : "29"
   },
   "com.android.providers.blockednumber" : {
-    "appName" : "application-label-zh-CN:存储已屏蔽的号码",
+    "appName" : "存储已屏蔽的号码",
     "pkgName" : "com.android.providers.blockednumber",
     "versionCode" : 29,
     "versionName" : "10",
@@ -3136,7 +3136,7 @@
     "targetSdk" : "26"
   },
   "com.android.providers.userdictionary" : {
-    "appName" : "application-label-zh-CN:用户字典",
+    "appName" : "用户字典",
     "pkgName" : "com.android.providers.userdictionary",
     "versionCode" : 29,
     "versionName" : "10",
@@ -3144,7 +3144,7 @@
     "targetSdk" : "29"
   },
   "bubei.tingshu" : {
-    "appName" : "application-label-zh-CN:懒人畅听",
+    "appName" : "懒人畅听",
     "pkgName" : "bubei.tingshu",
     "versionCode" : 217100,
     "versionName" : "7.1.0",
@@ -3152,7 +3152,7 @@
     "targetSdk" : "28"
   },
   "com.android.emergency" : {
-    "appName" : "application-label-zh-CN:紧急救援",
+    "appName" : "紧急救援",
     "pkgName" : "com.android.emergency",
     "versionCode" : 29,
     "versionName" : "10",
@@ -3208,7 +3208,7 @@
     "targetSdk" : "29"
   },
   "com.android.location.fused" : {
-    "appName" : "application-label-zh-CN:一体化位置信息",
+    "appName" : "一体化位置信息",
     "pkgName" : "com.android.location.fused",
     "versionCode" : 29,
     "versionName" : "10",
@@ -3232,7 +3232,7 @@
     "targetSdk" : "29"
   },
   "com.android.systemui" : {
-    "appName" : "application-label-zh-CN:系统界面",
+    "appName" : "系统界面",
     "pkgName" : "com.android.systemui",
     "versionCode" : 29,
     "versionName" : "10",
@@ -3256,7 +3256,7 @@
     "targetSdk" : "28"
   },
   "com.android.exchange" : {
-    "appName" : "application-label-zh-CN:Exchange服务",
+    "appName" : "Exchange服务",
     "pkgName" : "com.android.exchange",
     "versionCode" : 500065,
     "versionName" : "10",
@@ -3264,7 +3264,7 @@
     "targetSdk" : "28"
   },
   "com.wireguard.android" : {
-    "appName" : "application-label-zh-CN:WireGuard",
+    "appName" : "WireGuard",
     "pkgName" : "com.wireguard.android",
     "versionCode" : 492,
     "versionName" : "1.0.20220516",
@@ -3296,7 +3296,7 @@
     "targetSdk" : "29"
   },
   "com.qualcomm.qti.poweroffalarm" : {
-    "appName" : "application-label-zh-CN:关机闹钟",
+    "appName" : "关机闹钟",
     "pkgName" : "com.qualcomm.qti.poweroffalarm",
     "versionCode" : 29,
     "versionName" : "10",
@@ -3304,7 +3304,7 @@
     "targetSdk" : "29"
   },
   "com.amap.android.location" : {
-    "appName" : "application-label-zh-CN:网络位置",
+    "appName" : "网络位置",
     "pkgName" : "com.amap.android.location",
     "versionCode" : 5004,
     "versionName" : "5.0.04_a112",
@@ -3320,7 +3320,7 @@
     "targetSdk" : "29"
   },
   "com.qualcomm.qti.networksetting" : {
-    "appName" : "application-label-zh-CN:网络运营商",
+    "appName" : "网络运营商",
     "pkgName" : "com.qualcomm.qti.networksetting",
     "versionCode" : 29,
     "versionName" : "10",
@@ -3328,7 +3328,7 @@
     "targetSdk" : "29"
   },
   "com.android.permissioncontroller" : {
-    "appName" : "application-label-zh-CN:权限控制器",
+    "appName" : "权限控制器",
     "pkgName" : "com.android.permissioncontroller",
     "versionCode" : 290000000,
     "versionName" : "29systemimage",
@@ -3344,7 +3344,7 @@
     "targetSdk" : "28"
   },
   "com.android.traceur" : {
-    "appName" : "application-label-zh-CN:系统跟踪",
+    "appName" : "系统跟踪",
     "pkgName" : "com.android.traceur",
     "versionCode" : 2,
     "versionName" : "1.0",
@@ -3352,7 +3352,7 @@
     "targetSdk" : "29"
   },
   "com.taobao.taobao" : {
-    "appName" : "application-label-zh-CN:淘宝",
+    "appName" : "淘宝",
     "pkgName" : "com.taobao.taobao",
     "versionCode" : 388,
     "versionName" : "10.5.20",
@@ -3368,7 +3368,7 @@
     "targetSdk" : "30"
   },
   "com.oneplus.camera" : {
-    "appName" : "application-label-zh-CN:相机",
+    "appName" : "相机",
     "pkgName" : "com.oneplus.camera",
     "versionCode" : 23270449,
     "versionName" : "3.8.114",
@@ -3384,7 +3384,7 @@
     "targetSdk" : "26"
   },
   "com.oneplus.calendar" : {
-    "appName" : "application-label-zh-CN:日历",
+    "appName" : "日历",
     "pkgName" : "com.oneplus.calendar",
     "versionCode" : 601,
     "versionName" : "1.9.0.200907161341.4ff1299",
@@ -3400,7 +3400,7 @@
     "targetSdk" : "29"
   },
   "com.android.bluetooth" : {
-    "appName" : "application-label-zh-CN:蓝牙",
+    "appName" : "蓝牙",
     "pkgName" : "com.android.bluetooth",
     "versionCode" : 29,
     "versionName" : "10",
@@ -3456,7 +3456,7 @@
     "targetSdk" : "28"
   },
   "net.oneplus.launcher" : {
-    "appName" : "application-label-zh-CN:一加桌面",
+    "appName" : "一加桌面",
     "pkgName" : "net.oneplus.launcher",
     "versionCode" : 35110,
     "versionName" : "5.1.104.1.6.200415005726.309909b",
@@ -3464,7 +3464,7 @@
     "targetSdk" : "30"
   },
   "com.android.providers.contacts" : {
-    "appName" : "application-label-zh-CN:联系人存储",
+    "appName" : "联系人存储",
     "pkgName" : "com.android.providers.contacts",
     "versionCode" : 29,
     "versionName" : "10",
@@ -3472,7 +3472,7 @@
     "targetSdk" : "29"
   },
   "com.netease.cloudmusic" : {
-    "appName" : "application-label-zh-CN:网易云音乐",
+    "appName" : "网易云音乐",
     "pkgName" : "com.netease.cloudmusic",
     "versionCode" : 8006002,
     "versionName" : "8.6.02",
@@ -3480,7 +3480,7 @@
     "targetSdk" : "29"
   },
   "com.android.captiveportallogin" : {
-    "appName" : "application-label-zh-CN:CaptivePortalLogin",
+    "appName" : "CaptivePortalLogin",
     "pkgName" : "com.android.captiveportallogin",
     "versionCode" : 290000000,
     "versionName" : "2019-09",
@@ -3520,7 +3520,7 @@
     "targetSdk" : "30"
   },
   "com.eg.android.AlipayGphone" : {
-    "appName" : "application-label-zh-CN:支付宝",
+    "appName" : "支付宝",
     "pkgName" : "com.eg.android.AlipayGphone",
     "versionCode" : 450,
     "versionName" : "10.2.36.8000",
@@ -3536,7 +3536,7 @@
     "targetSdk" : "29"
   },
   "com.fingerprints.fingerprintsensortest" : {
-    "appName" : "application-label-zh-CN:Sensor Test Tool",
+    "appName" : "Sensor Test Tool",
     "pkgName" : "com.fingerprints.fingerprintsensortest",
     "versionCode" : 3,
     "versionName" : "2.1",
@@ -3560,7 +3560,7 @@
     "targetSdk" : "29"
   },
   "cn.wps.moffice_eng" : {
-    "appName" : "application-label-zh-CN:WPS Office",
+    "appName" : "WPS Office",
     "pkgName" : "cn.wps.moffice_eng",
     "versionCode" : 1230,
     "versionName" : "13.17.0",
@@ -3584,7 +3584,7 @@
     "targetSdk" : "29"
   },
   "com.achievo.vipshop" : {
-    "appName" : "application-label-zh-CN:唯品会",
+    "appName" : "唯品会",
     "pkgName" : "com.achievo.vipshop",
     "versionCode" : 75708,
     "versionName" : "7.57.8",
