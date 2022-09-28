@@ -48,14 +48,13 @@ public class PmgrantPermissions {
                 // init file
                 FileUtils.delete("all_cmds.sh");
                 for (String cmd : all_cmds) {
-                    FileUtils.saveTextToFile("all_cmds.sh", cmd, true);
+                    FileUtils.saveTextToFile("all_cmds.sh", "adb shell "+cmd, true);
                 }
 // one by one work
 //                for (String cmd : all_cmds) {
 //                    AdbShell.shell(cmd);
 //                }
             }
-
 
         } catch (Throwable e) {
             e.printStackTrace();
