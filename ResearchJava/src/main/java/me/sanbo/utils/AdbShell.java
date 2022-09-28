@@ -99,6 +99,36 @@ public class AdbShell {
         return result;
     }
 
+    public static void shell(List<String> cmds) {
+        Process proc = null;
+        DataOutputStream os = null;
+        OutputStream pos = null;
+        try {
+            // ADB path
+            proc = Runtime.getRuntime().exec(adbPath + " shell");
+            pos = proc.getOutputStream();
+            os = new DataOutputStream(pos);
+
+            for (String cmd : cmds) {
+                try{
+                    os.write(cmd.getBytes());
+                    os.writeBytes("\n");
+                    os.flush();
+                    os.writeBytes("exit\n");
+                    os.flush();
+                }catch (Throwable e){
+                    e.printStackTrace();
+                }
+            }
+
+        } catch (Throwable e) {
+            e.printStackTrace();
+        } finally {
+            SafeClose.close(pos, os);
+        }
+
+    }
+
     public static CopyOnWriteArrayList<String> getArray(String cmd) {
         return getArray(cmd, null, null);
     }

@@ -1,11 +1,10 @@
 package me.sanbo.utils;
 
+import javax.swing.filechooser.FileSystemView;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import javax.swing.filechooser.FileSystemView;
 
 /**
  * Copyright © 2020 sanbo Inc. All rights reserved.
@@ -93,17 +92,25 @@ public class FileUtils {
      */
     public static List<String> readForArray(String fileFullPathWithName) {
         FileInputStream fis = null;
+        List<String> lists = new ArrayList<String>();
         try {
-            fis = new FileInputStream(fileFullPathWithName);
+            if (TextUtils.isEmpty(fileFullPathWithName)) {
+                return lists;
+            }
+            File file = new File(fileFullPathWithName);
+            if (!isOk(file)) {
+                return lists;
+            }
+            fis = new FileInputStream(file);
             byte[] buffer = new byte[fis.available()];
             fis.read(buffer);
-            return new ArrayList<String>(Arrays.asList(new String(buffer, "UTF-8").split("\n")));
+            lists = new ArrayList<String>(Arrays.asList(new String(buffer, "UTF-8").split("\n")));
         } catch (Throwable e) {
             e.printStackTrace();
         } finally {
             close(fis);
         }
-        return new ArrayList<String>();
+        return lists;
     }
 
     private static void close(Closeable fis) {
@@ -113,6 +120,18 @@ public class FileUtils {
             }
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+    public static void delete(String fn ){
+        if (TextUtils.isEmpty(fn)){
+            return;
+        }
+        delete(new File(fn));
+    }
+
+    private static void delete(File file) {
+        if (file.exists()){
+            file.deleteOnExit();
         }
     }
 
@@ -147,9 +166,16 @@ public class FileUtils {
 
     public static boolean isOk(File file) {
         try {
-            if (!file.getParentFile().exists()) {
-                file.getParentFile().mkdirs();
+            if (file == null) {
+                return false;
             }
+            File par = file.getParentFile();
+            if (par != null) {
+                if (!par.exists()) {
+                    par.mkdirs();
+                }
+            }
+
             if (!file.exists()) {
                 file.createNewFile();
                 file.setExecutable(true);
@@ -158,6 +184,7 @@ public class FileUtils {
             }
             return true;
         } catch (Throwable e) {
+            e.printStackTrace();
         }
         return false;
     }
