@@ -60,7 +60,6 @@ public class PmgrantPermissions {
         } catch (Throwable e) {
             e.printStackTrace();
         }
-
     }
 
     private static void processAll() {
