@@ -42,9 +42,9 @@ public class Utils {
         return AdbShell.shell("getprop ro.product.brand");
     }
 
-    public static String getAppName(String apkName) {
+    public static String getAppName(String packageName) {
         // 1.获取安装路径
-        String aptPath = getInstallPath(apkName);
+        String aptPath = getInstallPath(packageName);
         // 2. 确认aapt
         if (!makesureAAPT()) {
             return "";
