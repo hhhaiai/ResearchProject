@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * @Copyright © 2022 sanbo Inc. All rights reserved.
- * @Description: 重新安装，通过所有权限
+ * @Description: 重新安装，通过所有权限, 通过adb install -r -g来同意所有权限
  * @Version: 1.0
  * @Create: 2022-09-28 13:48:35
  * @author: sanbo
@@ -29,7 +29,7 @@ public class ReinstallForPermission {
     }
 
     private static void processAll() {
-        List<String> pkgs = AdbShell.getArray("pm list package", "package:", "");
+        List<String> pkgs = AdbShell.getArray("pm list package -3", "package:", "");
 //        List<String> pkgs = FileUtils.readForArray("pkg.txt");
         System.out.println(pkgs.size());
 
