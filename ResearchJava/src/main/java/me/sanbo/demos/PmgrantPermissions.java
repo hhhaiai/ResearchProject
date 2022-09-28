@@ -30,9 +30,11 @@ public class PmgrantPermissions {
         try {
             allAppPermissions = FileUtils.readForArray("allAppPermissions.txt");
 
-            processAll();
+//            processAll();
 //            parserOne("com.ks.kaishustory");
 //            parserOne("com.xs.fm");
+//            parserOne("com.android.VideoPlayer");
+            parserOne("com.vivo.browser");
 
             if (allAppPermissions.size() > 0) {
                 for (String p : allAppPermissions) {
@@ -48,8 +50,9 @@ public class PmgrantPermissions {
                 // init file
                 FileUtils.delete("all_cmds.sh");
                 for (String cmd : all_cmds) {
-                    FileUtils.saveTextToFile("all_cmds.sh", "adb shell "+cmd, true);
+                    FileUtils.saveTextToFile("all_cmds.sh", "adb shell " + cmd, true);
                 }
+                Runtime.getRuntime().exec("bash all_cmd.sh");
 // one by one work
 //                for (String cmd : all_cmds) {
 //                    AdbShell.shell(cmd);
@@ -107,21 +110,6 @@ public class PmgrantPermissions {
 
 //            System.out.println("----->"+isPermissioning);
             if (isPermissioning) {
-                if (line.startsWith("applicationInfo")
-                        || line.startsWith("legacyNativeLibraryDir=")
-                        || line.startsWith("versionName=")
-                        || line.startsWith("versionCode=")
-                        || line.startsWith("supportsScreens=")
-                        || line.startsWith("dataDir=")
-                        || line.startsWith("queriesIntents=")
-                        || line.startsWith("privateFlags=")
-                        || line.startsWith("flags=")
-                        || line.startsWith("pkgFlags=")
-                        || line.startsWith("signatures=")
-                ) {
-                    System.err.println(pkg + "----" + line);
-
-                }
                 if (line.contains(":")) {
                     String p1 = line.split(":")[0];
 //                    System.out.println("p1----->" + p1);
