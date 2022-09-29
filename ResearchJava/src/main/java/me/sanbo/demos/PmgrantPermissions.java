@@ -30,11 +30,13 @@ public class PmgrantPermissions {
         try {
             allAppPermissions = FileUtils.readForArray("allAppPermissions.txt");
 
-//            processAll();
+            processAll();
 //            parserOne("com.ks.kaishustory");
 //            parserOne("com.xs.fm");
 //            parserOne("com.android.VideoPlayer");
-            parserOne("com.vivo.browser");
+//            parserOne("me.fup.v0");
+//            parserOne("com.baidu.BaiduMap");
+//            parserOne("com.picc.gdvmeng");
 
             if (allAppPermissions.size() > 0) {
                 for (String p : allAppPermissions) {
@@ -47,16 +49,20 @@ public class PmgrantPermissions {
 
             // save to file
             if (all_cmds.size() > 0) {
+                System.out.println("all_cmds 共:" + all_cmds.size());
                 // init file
                 FileUtils.delete("all_cmds.sh");
                 for (String cmd : all_cmds) {
                     FileUtils.saveTextToFile("all_cmds.sh", "adb shell " + cmd, true);
                 }
-                Runtime.getRuntime().exec("bash all_cmd.sh");
-// one by one work
-//                for (String cmd : all_cmds) {
-//                    AdbShell.shell(cmd);
-//                }
+//                Runtime.getRuntime().exec("bash all_cmd.sh");
+//                  // ne by one work
+                for (int i = 0; i < all_cmds.size(); i++) {
+
+                    System.out.println("all_cmds：" + i + "/" + all_cmds.size());
+                    String cmd = all_cmds.get(i);
+                    AdbShell.shell(cmd);
+                }
             }
 
         } catch (Throwable e) {
@@ -67,7 +73,7 @@ public class PmgrantPermissions {
     private static void processAll() {
         List<String> pkgs = AdbShell.getArray("pm list package", "package:", "");
 //        List<String> pkgs = FileUtils.readForArray("pkg.txt");
-        System.out.println(pkgs.size());
+        System.out.println("pkgs size:" + pkgs.size());
 
         for (int i = 0; i < pkgs.size(); i++) {
             String pkg = pkgs.get(i);
@@ -85,6 +91,8 @@ public class PmgrantPermissions {
         if (TextUtils.isEmpty(pkg)) {
             return false;
         }
+//        System.out.println("inside [" + pkg + "]");
+
         // setup 1: get all permissions
         List<String> lines = AdbShell.getArray("dumpsys package " + pkg);
         List<String> permissions = new ArrayList<String>();
@@ -133,7 +141,12 @@ public class PmgrantPermissions {
         }
 
         for (String p : permissions) {
-            all_cmds.add("pm grant " + pkg + " " + p);
+            if (TextUtils.isEmpty(p) || p.contains(" ") || p.contains("/") || p.startsWith(".") || !p.contains(".")) {
+                System.err.println(pkg+"-----------"+p);
+                continue;
+            }
+
+            all_cmds.add("pm grant --user 1 " + pkg + " " + p);
         }
 
 //        //not one by one

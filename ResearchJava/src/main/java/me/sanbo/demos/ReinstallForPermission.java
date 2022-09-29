@@ -4,6 +4,7 @@ import me.sanbo.utils.AdbShell;
 import me.sanbo.utils.TextUtils;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -20,6 +21,7 @@ public class ReinstallForPermission {
         try {
             processAll();
 //            processOne("com.lxzq.mobile.sdaccount");
+//            processOne("com.picc.gdvmeng");
         } catch (Throwable e) {
             e.printStackTrace();
         } finally {
@@ -28,6 +30,10 @@ public class ReinstallForPermission {
 
     }
 
+    private static final List<String> notWorkList = new ArrayList<String>(){{
+//        add("com.coloros.backuprestore");
+    }};
+
     private static void processAll() {
         List<String> pkgs = AdbShell.getArray("pm list package -3", "package:", "");
 //        List<String> pkgs = FileUtils.readForArray("pkg.txt");
@@ -35,9 +41,10 @@ public class ReinstallForPermission {
 
         for (int i = 0; i < pkgs.size(); i++) {
             String pkg = pkgs.get(i);
-            if (TextUtils.isEmpty(pkg)) {
+            if (TextUtils.isEmpty(pkg) || notWorkList.contains(pkg) || pkg.startsWith(".") || !pkg.contains(".") || pkg.contains("/")) {
                 continue;
             }
+
             boolean isSuccess = processOne(pkg);
             if (isSuccess) {
                 System.out.println("进度: " + i + "/" + pkgs.size() + " 【" + pkg + "】");
